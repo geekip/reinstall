@@ -4518,8 +4518,7 @@ install_windows() {
         else
             virtio_source=msi
         fi
-
-        baseurl=https://fedorapeople.org/groups/virt/virtio-win/direct-downloads
+        baseurl=https://files-1302460090.cos.ap-beijing.myqcloud.com/virtio-win
 
         if [ "$virtio_source" = iso ]; then
             download $baseurl/$dir/virtio-win.iso $drv/virtio.iso
