@@ -4518,7 +4518,7 @@ install_windows() {
         else
             virtio_source=msi
         fi
-        baseurl=https://files-1302460090.cos.ap-beijing.myqcloud.com/virtio-win
+        baseurl=https://oss-yf-file.oss-cn-beijing.aliyuncs.com/windows7
 
         if [ "$virtio_source" = iso ]; then
             download $baseurl/$dir/virtio-win.iso $drv/virtio.iso
