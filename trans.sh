@@ -4506,13 +4506,12 @@ install_windows() {
 
         # https://github.com/virtio-win/virtio-win-pkg-scripts/issues/40
         # https://github.com/virtio-win/virtio-win-pkg-scripts/issues/61
-        
-        # case "$nt_ver" in
-        # 6.0 | 6.1) dir=archive-virtio/virtio-win-0.1.173-9 ;; # vista|w7|2k8|2k8R2
-        # 6.2 | 6.3) dir=archive-virtio/virtio-win-0.1.215-1 ;; # w8|w8.1|2k12|2k12R2
-        # *) dir=stable-virtio ;;
-        # esac
-        dir=archive-virtio/virtio-win-0.1.173-9
+        nt_ver=6.1
+        case "$nt_ver" in
+        6.0 | 6.1) dir=archive-virtio/virtio-win-0.1.173-9 ;; # vista|w7|2k8|2k8R2
+        6.2 | 6.3) dir=archive-virtio/virtio-win-0.1.215-1 ;; # w8|w8.1|2k12|2k12R2
+        *) dir=stable-virtio ;;
+        esac
 
         # vista|w7|2k8|2k8R2|arm64 要从 iso 获取驱动
         if [ "$nt_ver" = 6.0 ] || [ "$nt_ver" = 6.1 ] || [ "$arch_wim" = arm64 ]; then
