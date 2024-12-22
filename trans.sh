@@ -4506,7 +4506,6 @@ install_windows() {
 
         # https://github.com/virtio-win/virtio-win-pkg-scripts/issues/40
         # https://github.com/virtio-win/virtio-win-pkg-scripts/issues/61
-        nt_ver=6.1
         case "$nt_ver" in
         6.0 | 6.1) dir=archive-virtio/virtio-win-0.1.173-9 ;; # vista|w7|2k8|2k8R2
         6.2 | 6.3) dir=archive-virtio/virtio-win-0.1.215-1 ;; # w8|w8.1|2k12|2k12R2
@@ -4519,7 +4518,7 @@ install_windows() {
         else
             virtio_source=msi
         fi
-        baseurl=https://oss-yf-file.oss-cn-beijing.aliyuncs.com/windows7
+        baseurl=https://files-1302460090.cos.ap-beijing.myqcloud.com/virtio-win
 
         if [ "$virtio_source" = iso ]; then
             download $baseurl/$dir/virtio-win.iso $drv/virtio.iso
